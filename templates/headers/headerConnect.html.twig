@@ -1,0 +1,12 @@
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/header.css') }}">
+{% endblock %}
+
+<a id="nomSite" href="{{ path('gestion_compte') }}">Homa</a>
+<div id="nav">
+    <a id="gestionCompte" href="{{ path('gestion_compte', {'id': app.user.id}) }}">Compte</a>
+    <a id="monProfil" href="{{ path('profil', {'id' : app.user.id }) }}">Profil</a>
+    <a id="seDeconnecter" href="{{ path('app_logout') }}">Déconnexion</a>
+</div>
+
+

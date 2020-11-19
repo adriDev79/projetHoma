@@ -1,0 +1,16 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}Mon Profil{% endblock %}
+
+{% block header %}
+    {% include 'headers/headerConnect.html.twig' %}
+{% endblock %}
+
+{% block main %}
+    <h2>Modifier mon profil</h2>
+    {{ form_start(formUpdateProfil) }}
+    {{ form_widget(formUpdateProfil) }}
+    <button type="submit">Valider</button>
+    <button type="reset">Annuler</button>
+    {{ form_end(formUpdateProfil) }}
+{% endblock %}

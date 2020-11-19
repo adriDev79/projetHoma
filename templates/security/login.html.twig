@@ -1,0 +1,48 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}Connexion{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/login.css') }}">
+{% endblock %}
+
+{% block header %}{% include 'headers/headerNoConnect.html.twig' %}{% endblock %}
+
+{% block main %}
+    <h2 id="h2Login" class="h3 mb-3 font-weight-normal"><b>Connexion</b></h2>
+    <p id="description"><b>Gérer facilement et rapidement le budget de la maison !</b></p>
+    <form ID="formLogin" method="post">
+        {% if error %}
+            <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+        {% endif %}
+
+        {% if app.user %}
+            <div class="mb-3">
+                You are logged in as {{ app.user.username }}, <a href="{{ path('app_logout') }}">Logout</a>
+            </div>
+        {% endif %}
+
+        <label id="labelUsername" for="inputUsername">Identifiant</label>
+        <input type="text" value="{{ last_username }}" name="username" id="inputUsername" class="form-control" placeholder="Votre pseudo" required autofocus>
+        <label  id="labelPassword" for="inputPassword">Mot de passe</label>
+        <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Votre mot de passe" required>
+
+        <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+
+            <div class="checkbox mb-3">
+                <label>
+                    <input type="checkbox" name="_remember_me"> Se souvenir de moi
+                </label>
+            </div>
+
+        <button id="btnConnexion" class="btn btn-lg btn-primary" type="submit">
+            Connexion
+        </button>
+    </form>
+    <p id="mdpOublie"><a  href="{{ path('app_forgot_password_request') }}">Mot de passe oublié ?</a></p>
+    <p id="inscrivezVous">Pas encore inscrit ? <a href="{{ path('app_register') }}">inscrivez-vous !</a></p>
+{% endblock %}
+
+{% block footer %}
+    {% include 'footer/footer.html.twig' %}
+{% endblock %}

@@ -1,0 +1,66 @@
+* {
+    color: #17202A;
+    font-weight: bold;
+}
+
+main {
+    width: 100%;
+    font-family: Tahoma, sans-serif;
+}
+
+#h2Login {
+    font-size: 20px;
+    text-align: left;
+    color: #17202A;
+}
+#description {
+    font-size: 25px;
+    margin-left: 20%;
+    text-align: center;
+    width: 60%;
+}
+
+#formLogin {
+    margin: 70px auto 20px;
+    width: 30%;
+}
+
+#labelUsername {
+    font-weight: bold;
+    color: white;
+    background: #9C27B0;
+    width: 100%;
+    padding: 5px;
+    border-radius: 20px;
+}
+
+#labelPassword {
+    color: white;
+    font-weight: bold;
+    background: #CB4335;
+    width: 100%;
+    padding: 5px;
+    border-radius: 20px;
+}
+
+#inputUsername, #inputPassword {
+    border: 2px solid #17202A;
+    margin-bottom: 20px;
+}
+
+#btnConnexion {
+    text-align: center;
+    font-size: 15px;
+    margin-left: 20%;
+    width: 60%;
+}
+
+#mdpOublie, #inscrivezVous {
+    text-align: center;
+}
+
+@media screen and (max-width: 400px) {
+    #formLogin {
+        width: 90%;
+    }
+}

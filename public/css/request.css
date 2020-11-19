@@ -1,0 +1,57 @@
+main {
+    width: 100%;
+    color: #17202A;
+}
+
+h1 {
+    text-align: left;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#formRequest {
+    margin: 100px auto 20px;
+    width: 40%;
+}
+
+#formRequest > form > div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+#formRequest > form > div > label {
+    font-weight: bold;
+    color: white;
+    background: #CB4335;
+    width: 100%;
+    padding: 5px;
+    border-radius: 20px;
+}
+
+#formRequest > form > div > input {
+    width: 100%;
+    border: 2px solid #17202A;
+}
+
+#text {
+    text-align: center;
+}
+
+#btnRequest {
+    margin-left: 35%;
+    width: 30%;
+    margin-top: 30px;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+}
+
+@media screen and (max-width: 400px) {
+    #formRequest {
+        width: 90%;
+    }
+}

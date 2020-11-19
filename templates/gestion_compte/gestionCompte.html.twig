@@ -1,0 +1,159 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}Gestion compte{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/gestionCompte.css') }}">
+{% endblock %}
+
+{% block header %}
+    {% include 'headers/headerConnect.html.twig' %}
+{% endblock %}
+
+{% block main %}
+    <h2 id="h2GestionCompte">Gestion compte</h2>
+
+    <div id="container">
+        <div id="revenu">
+            <p id="messageMainRevenu"></p>
+            <div id="titreDivRevenu">
+                <h3 id="h3Revenu">Revenu(s)</h3>
+                <i id="btnChevronReveunu" class="fas fa-chevron-down"></i>
+            </div>
+            <div id="gestionRevenu">
+                <div id="headerAjouterRevenu">
+                    <p><b>Ajouter un revenu</b></p>
+                    <i class="fas fa-plus-square fa-lg" id="btnAjouterRevenu" style="width: 50px"></i>
+                </div>
+                <div id="ajouterRevenu">
+                    <form action="" method="post" name="formAjouterRevenu">
+                        <label for="libelle"></label>
+                        <input type="text" name="libelle" id="libelle" placeholder="Libelle..." required>
+
+                        <label for="montant"></label>
+                        <input type="number" name="montant" id="montant" placeholder="Montant..." required>
+
+                        <span title="valider"><i class="fas fa-check-square fa-lg" id="btnValiderAjoutRevenu"></i></span>
+                    </form>
+                </div>
+                <div id="affichageRevenu">
+                </div>
+            </div>
+        </div>
+        <div id="depenseFixe">
+            <p id="messageMainDepenseFixe"></p>
+            <div id="titreDivDepenseF">
+                <h3 id="h3DepenseFixe">Dépense(s) fixe(s)</h3>
+                <i id="btnChevronDepenseF" class="fas fa-chevron-down"></i>
+            </div>
+            <div id="gestionDepensesFixe">
+                <div id="headerAjouterDepensesFixe">
+                    <p><b>Ajouter une dépense fixe</b></p>
+                    <i class="fas fa-plus-square fa-lg" id="btnAjouterDepenseFixe"></i>
+                </div>
+                <div id="ajouterDepenseFixe">
+                    <form action="" method="post" name="formAjouterDepenseFixe">
+                        <label for="selectTypeDepense"></label>
+                        <select name="selectTypeDepense" id="selectTypeDepense">
+                            <option value="default">Type de dépense</option>
+                            {% for type in types %}
+                                <option class="optionTypeDepense" id="{{ type.id }}">
+                                    <p id="pId" style="display: none">{{ type.id }}</p>
+                                    {{ type.libelleTypeDepense }}
+                                </option>
+                            {% endfor %}
+                        </select>
+
+                        <label for="libelleDepenseFixe"></label>
+                        <input type="text" name="libelle" id="libelleDepenseFixe" placeholder="Libelle..." required>
+
+                        <label for="montantDepenseFixe"></label>
+                        <input type="number" name="montant" id="montantDepenseFixe" placeholder="Montant..." required>
+
+                        <span title="valider"><i class="fas fa-check-square fa-lg" id="btnValiderAjoutDepenseFixe"></i></span>
+                    </form>
+                </div>
+                <div id="affichageDepenseFixe">
+                </div>
+            </div>
+        </div>
+        <div id="depenseAnnexe">
+            <p id="messageMainDepenseAnnexe"></p>
+            <div id="titreDivDepenseA">
+                <h3 id="h3DepenseAnnexe">Dépense(s) annexe(s)</h3>
+                <i id="btnChevronDepenseA" class="fas fa-chevron-down"></i>
+            </div>
+            <div id="gestionDepensesAnnexe">
+                <div id="headerAjouterDepensesAnnexe">
+                    <p><b>Ajouter une dépense annexe</b></p>
+                    <i class="fas fa-plus-square fa-lg" id="btnAjouterDepenseAnnexe"></i>
+                </div>
+                <div id="ajouterDepenseAnnexe">
+                    <form action="" method="post" name="formAjouterDepenseAnnexe">
+                        <label for="selectTypeDepense"></label>
+                        <select name="selectTypeDepenseAnnexe" id="selectTypeDepenseAnnexe">
+                            <option value="default">Type de dépense</option>
+                            {% for type in types %}
+                                <option class="optionTypeDepenseAnnexe" id="{{ type.id }}">
+                                    <p id="pId" style="display: none">{{ type.id }}</p>
+                                    {{ type.libelleTypeDepense }}
+                                </option>
+                            {% endfor %}
+                        </select>
+
+                        <label for="libelleDepenseAnnexe"></label>
+                        <input type="text" name="libelle" id="libelleDepenseAnnexe" placeholder="Libelle..." required>
+
+                        <label for="montantDepenseAnnexe"></label>
+                        <input type="number" name="montant" id="montantDepenseAnnexe" placeholder="Montant..." required>
+
+                        <span title="valider"><i class="fas fa-check-square fa-lg" id="btnValiderAjoutDepenseAnnexe"></i></span>
+                    </form>
+                </div>
+                <div id="affichageDepenseAnnexe">
+                </div>
+            </div>
+        </div>
+        <div id="totaux">
+            <p id="messageMainTotaux"></p>
+            <div id="titreDivTotaux">
+                <h3 id="h3Totaux">Totaux</h3>
+                <i id="btnChevronTotaux" class="fas fa-chevron-up"></i>
+            </div>
+            <div id="gestionTotaux">
+                <div id="totalRevenu">
+                    <p>Total des revenus : </p>
+                </div>
+                <div id="totalDepenseFixe">
+                    <p>Total des dépenses fixes :</p>
+                </div>
+                <div id="totalDepenseAnnexe">
+                    <p>Total des dépenses annexes : </p>
+                </div>
+                <div id="totalDepense">
+                    <p>Total des dépenses (fixe + annexe) : </p>
+                </div>
+                <div id="soldeActuel">
+                    <label for="inputSoldeActuel">Votre solde bancaire actuel : </label>
+                    <input id="inputSoldeActuel" type="number">
+
+                </div>
+                <div id="solde">
+                    <p>votre solde : </p>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block footer %}
+    {% include 'footer/footer.html.twig' %}
+{% endblock %}
+
+{% block js %}
+    <script src="{{ asset('js/gestionCompteRevenu.js') }}"></script>
+    <script src="{{ asset('js/gestionCompteDepenseFixe.js') }}"></script>
+    <script src="{{ asset('js/gestionCompteDepenseAnnexe.js') }}"></script>
+    <script src="{{ asset('js/gestionCompteTotaux.js') }}"></script>
+    <script src="{{ asset('js/utils.js') }}"></script>
+{% endblock %}

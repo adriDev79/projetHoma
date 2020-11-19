@@ -1,0 +1,334 @@
+#h2GestionCompte{
+    font-size: 20px;
+    font-weight: bold;
+    padding: 5px;
+    width: 100%;
+    margin-left: 1%;
+    color: #17202A;
+}
+
+h3 {
+    color: #f2eadb;
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#titreDivRevenu, #titreDivDepenseF, #titreDivDepenseA, #titreDivTotaux {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#btnChevronReveunu, #btnChevronDepenseF, #btnChevronDepenseA, #btnChevronTotaux {
+    margin-right: 1%;
+    cursor: pointer;
+}
+
+main {
+    width: 100%;
+}
+
+#container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#revenu {
+}
+
+#revenu, #depenseFixe, #depenseAnnexe, #totaux{
+    background: #f2eadb;
+    color: #17202A;
+    width: 70%;
+    margin-left: 1%;
+    margin-bottom: 2%;
+    padding-left: 1%;
+    padding-right: 1%;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.1);
+    border-radius: 5px;
+}
+
+#h3Revenu {
+    background: #9C27B0;
+    width: 50%;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+#h3DepenseFixe {
+    background: #CB4335;
+    width: 50%;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+#h3DepenseAnnexe {
+    background: #2E86C1;
+    width: 50%;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+#h3Totaux {
+    background: #D68910;
+    width: 50%;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+#gestionRevenu, #gestionDepensesFixe, #gestionDepensesAnnexe {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+#gestionTotaux {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+#affichageRevenu, #affichageDepenseFixe, #affichageDepenseAnnexe{
+    width: 100%;
+}
+
+
+#headerAjouterRevenu, #headerAjouterDepensesFixe, #headerAjouterDepensesAnnexe{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.divIconSupp, .divIconSuppDF, .divIconSuppDA{
+    display: block;
+}
+
+.divIconsModif, .divIconsModifDF, .divIconsModifDA {
+    display: none;
+}
+
+#btnAjouterRevenu,
+#btnAjouterDepenseFixe,
+#btnAjouterDepenseAnnexe,
+.iconValidModifierRevenu,
+.iconAnnulerModifRevenu,
+.iconAnnulerModifDepenseFixe,
+.iconValidModifierDepenseAnnexe,
+.iconAnnulerModifDepenseAnnexe {
+    margin-left: 5px;
+}
+
+#btnValiderAjoutRevenu, #btnAjouterRevenu{
+     cursor: pointer;
+     color: #17202A;
+ }
+
+#btnAjouterRevenu, #btnAjouterDepenseFixe, #btnAjouterDepenseAnnexe {
+    margin-left: 10px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    color: #229954;
+}
+
+#btnValiderAjoutRevenu:hover,
+#btnAjouterDepenseFixe:hover,
+#btnAjouterDepenseAnnexe:hover,
+.iconValidModifierRevenu:hover,
+.iconValidModifierDepenseFixe:hover,
+.iconValidModifierDepenseAnnexe:hover,
+#btnValiderAjoutDepenseFixe:hover,
+#btnValiderAjoutDepenseAnnexe:hover{
+    cursor: pointer;
+    transition: 0.2s;
+    color: #1E8449;
+}
+
+.iconSupprimerRevenu {
+    display: flex;
+    cursor: pointer;
+    color: #17202A;
+}
+
+.iconSupprimerRevenu:hover,
+.iconAnnulerModifRevenu:hover,
+.iconSupprimerDepenseFixe:hover,
+.iconAnnulerModifDepenseFixe:hover,
+#btnRetourDepenseFixe:hover,
+.iconSupprimerDepenseAnnexe:hover,
+.iconAnnulerModifDepenseAnnexe:hover,
+#btnRetourDepenseAnnexe:hover{
+    transition: 0.2s;
+    color: #CC0000;
+}
+
+#ajouterRevenu, #ajouterDepenseFixe, #ajouterDepenseAnnexe{
+    display: none;
+}
+
+.rev, .depF, .depA {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border-bottom: 1px solid #1e3d59;
+}
+
+.rev:last-child, .depF:last-child, .depA:last-child {
+    border-bottom: none;
+}
+
+.selectType, .selectTypeAnnexe{
+    background: #f2eadb;
+    border: #f2eadb;
+    color: #17202A;
+    font-weight: bold;
+}
+
+.pLibelleRevenu, .pLibelleDepenseFixe, .pLibelleDepenseAnnexe{
+    background: #f2eadb;
+    border: #f2eadb;
+    color: #17202A;
+    font-weight: bold;
+    width: 35%;
+}
+
+.pMontantRevenu, .pMontantDepenseFixe, .pMontantDepenseAnnexe{
+    text-align: center;
+    margin-left: 10px;
+    background: #f2eadb;
+    border: #f2eadb;
+    color: #17202A;
+    font-weight: bold;
+    width: 15%;
+}
+
+.euro {
+    margin-top: 15px;
+}
+
+.pLibelleTypeDepenseFixe, .pLibelleTypeDepenseAnnexe{
+    color: #f2eadb;
+    font-weight: bold;
+    width: 15%;
+}
+
+.divBtnOption, .divModifierDepenseFixe, .divModifierDepenseAnnexe{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.iconSupprimerRevenu,
+.iconSupprimerDepenseFixe,
+.iconValidModifierDepenseFixe,
+.iconSupprimerDepenseAnnexe,
+.iconValidModifierDepenseAnnexe{
+    margin-left: 10px;
+}
+
+#pMontantRevenu, .pLibelleDepenseFixe, .pLibelleDepenseAnnexe{
+    margin-left: 15px;
+}
+
+#totalRevenu, #totalDepenseFixe, #totalDepenseAnnexe, #totalDepense, #solde{
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pTotaux{
+    margin-left: 5px;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 1200px) {
+    #revenu, #depenseFixe, #depenseAnnexe, #totaux {
+        margin-left: 0;
+        width: 98%;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    #revenu, #depenseFixe, #depenseAnnexe, #totaux {
+        margin-left: 0;
+        width: 100%;
+        border-radius: 0;
+    }
+
+    .pLibelleRevenu {
+        width: 60%;
+    }
+
+    .pLibelleDepenseFixe, .pLibelleDepenseAnnexe {
+        width: 40%;
+        margin-left: 0;
+    }
+
+    .pMontantRevenu, .pMontantDepenseFixe, .pMontantDepenseAnnexe {
+        width: 25%;
+    }
+
+    .depF, .depA {
+        flex-wrap: wrap;
+    }
+
+    .selectType, .selectTypeAnnexe {
+        width: 70%;
+    }
+
+    .pMontantDepenseFixe {
+        float: left;
+    }
+}
+
+@media screen and (max-width: 400px) {
+
+    #revenu, #depenseFixe, #depenseAnnexe, #totaux {
+        width: 100%;
+        box-shadow: none;
+    }
+
+    #selectTypeDepense, #selectTypeDepenseAnnexe {
+        width: 50%;
+        margin-bottom: 5px;
+        margin-left: -1%;
+    }
+
+    #libelle, #libelleDepenseFixe, #libelleDepenseAnnexe {
+        width: 50%;
+    }
+
+    #montant, #montantDepenseFixe, #montantDepenseAnnexe {
+        width: 30%;
+    }
+
+    .pLibelleRevenu, .pLibelleDepenseFixe, .pLibelleDepenseAnnexe {
+        width: 70%;
+    }
+
+    .pMontantRevenu, .pMontantDepenseFixe, .pMontantDepenseAnnexe {
+        width: 25%;
+    }
+    .rev {
+        flex-wrap: wrap;
+    }
+
+    .divBtnOption {
+        margin-top: -20px;
+        width: 100%;
+    }
+
+    #inputSoldeActuel {
+        width: 40%;
+    }
+
+    #btnAjouterRevenu {
+        width: 100px;
+    }
+}

@@ -1,0 +1,18 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}Mon Profil{% endblock %}
+
+{% block header %}
+    {% include 'headers/headerConnect.html.twig' %}
+{% endblock %}
+
+{% block main %}
+    <h2>Mon profil</h2>
+
+    <p>Prénom : {{ user.prenom }}</p>
+    <p>Nom : {{ user.nom }}</p>
+    <p>Pseudo : {{ user.username }}</p>
+    <p>Email : {{ user.email }}</p>
+
+    <a href="{{ path('modifier_profil', {'id': app.user.id}) }}">Modifier mon profil</a>
+{% endblock %}

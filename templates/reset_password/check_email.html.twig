@@ -1,0 +1,20 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}réinitisaliser le mot de passe{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/checkEmail.css') }}">
+{% endblock %}
+
+{% block header %}
+    {% include 'headers/headerNoConnect.html.twig' %}
+{% endblock %}
+
+{% block main %}
+    <p>Un email vous as été envoyé pour réinitialisé votre mot de passe. Le lien expireras dans {{ tokenLifetime|date('g') }} heure(s).</p>
+    <p>Si vous ne recevez pas cette email, vérifié vos spams sinon <a href="{{ path('app_forgot_password_request') }}">recommencer</a>.</p>
+{% endblock %}
+
+{% block footer %}
+    {% include 'footer/footer.html.twig' %}
+{% endblock %}
