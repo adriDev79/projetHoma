@@ -67,8 +67,6 @@ function afficherRevenu() {
             url : url,
             type : 'GET',
             success: function (response) {
-                console.log(response);
-                console.log(response._getContent());
                 for (var i = 0; i < response.length; i++){
                     var id = response[i].id;
                     var libelle = response[i].libelleRevenu;

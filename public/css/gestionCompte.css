@@ -41,7 +41,7 @@ main {
 }
 
 #revenu, #depenseFixe, #depenseAnnexe, #totaux{
-    background: #f2eadb;
+    background: white;
     color: #17202A;
     width: 70%;
     margin-left: 1%;
@@ -54,30 +54,30 @@ main {
 
 #h3Revenu {
     background: #9C27B0;
-    width: 50%;
+    width: 30%;
     padding: 10px;
-    border-radius: 20px;
+    border-radius: 5px;
 }
 
 #h3DepenseFixe {
     background: #CB4335;
-    width: 50%;
+    width: 30%;
     padding: 10px;
-    border-radius: 20px;
+    border-radius: 5px;
 }
 
 #h3DepenseAnnexe {
     background: #2E86C1;
-    width: 50%;
+    width: 30%;
     padding: 10px;
-    border-radius: 20px;
+    border-radius: 5px;
 }
 
 #h3Totaux {
     background: #D68910;
-    width: 50%;
+    width: 30%;
     padding: 10px;
-    border-radius: 20px;
+    border-radius: 5px;
 }
 
 #gestionRevenu, #gestionDepensesFixe, #gestionDepensesAnnexe {
@@ -182,16 +182,24 @@ main {
     border-bottom: none;
 }
 
+#affichageDepenseFixe > div > select {
+    color: #CB4335;
+}
+
+#affichageDepenseAnnexe > div > select {
+    color: #2E86C1;
+}
+
 .selectType, .selectTypeAnnexe{
-    background: #f2eadb;
-    border: #f2eadb;
+    background: white;
+    border: white;
     color: #17202A;
     font-weight: bold;
 }
 
 .pLibelleRevenu, .pLibelleDepenseFixe, .pLibelleDepenseAnnexe{
-    background: #f2eadb;
-    border: #f2eadb;
+    background: white;
+    border: white;
     color: #17202A;
     font-weight: bold;
     width: 35%;
@@ -200,8 +208,8 @@ main {
 .pMontantRevenu, .pMontantDepenseFixe, .pMontantDepenseAnnexe{
     text-align: center;
     margin-left: 10px;
-    background: #f2eadb;
-    border: #f2eadb;
+    background: white;
+    border: white;
     color: #17202A;
     font-weight: bold;
     width: 15%;
@@ -212,7 +220,7 @@ main {
 }
 
 .pLibelleTypeDepenseFixe, .pLibelleTypeDepenseAnnexe{
-    color: #f2eadb;
+    color: white;
     font-weight: bold;
     width: 15%;
 }
@@ -320,7 +328,10 @@ main {
     }
 
     .divBtnOption {
-        margin-top: -20px;
+        height: 25px;
+        background: #f2eadb;
+        margin-top: -5px;
+        margin-bottom: 5px;
         width: 100%;
     }
 
@@ -330,5 +341,9 @@ main {
 
     #btnAjouterRevenu {
         width: 100px;
+    }
+
+    #h3Revenu, #h3DepenseFixe,#h3DepenseAnnexe, #h3Totaux{
+        width: 60%;
     }
 }

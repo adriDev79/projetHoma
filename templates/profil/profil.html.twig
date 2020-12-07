@@ -2,17 +2,34 @@
 
 {% block title %}Mon Profil{% endblock %}
 
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/profil.css') }}">
+{% endblock %}
+
 {% block header %}
     {% include 'headers/headerConnect.html.twig' %}
 {% endblock %}
 
 {% block main %}
-    <h2>Mon profil</h2>
+    <h2 id="h2Profil">Mon profil</h2>
 
-    <p>Prénom : {{ user.prenom }}</p>
-    <p>Nom : {{ user.nom }}</p>
-    <p>Pseudo : {{ user.username }}</p>
-    <p>Email : {{ user.email }}</p>
+    <div id="profil">
+        <p>Prénom : {{ user.prenom }}</p>
+        <p>Nom : {{ user.nom }}</p>
+        <p>Pseudo : {{ user.username }}</p>
+        <p>Email : {{ user.email }}</p>
+    </div>
 
-    <a href="{{ path('modifier_profil', {'id': app.user.id}) }}">Modifier mon profil</a>
+    <div id="divBtnModifProfil">
+        <a id="aBtnModifProfil" href="{{ path('modifier_profil', {'id': app.user.id}) }}">
+            <button id="btnModifProfil" class="btn btn-lg btn-primary" type="submit">
+                Modifier mon profil
+            </button>
+        </a>
+    </div>
+
+{% endblock %}
+
+{% block footer %}
+    {% include 'footer/footer.html.twig' %}
 {% endblock %}

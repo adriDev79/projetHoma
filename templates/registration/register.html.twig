@@ -2,6 +2,10 @@
 
 {% block title %}Inscription{% endblock %}
 
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/inscription.css') }}">
+{% endblock %}
+
 {% block header %}{% include 'headers/headerNoConnect.html.twig' %}{% endblock %}
 
 {% block main %}
@@ -9,9 +13,10 @@
         <div class="alert alert-danger" role="alert">{{ flashError }}</div>
     {% endfor %}
 
-    <h1>Inscription</h1>
+    <h2 id="h2Inscription">Inscription</h2>
 
-    {{ form_start(registrationForm) }}
+    <div id="divInscription">
+        {{ form_start(registrationForm) }}
         {{ form_row(registrationForm.username, { label : 'Pseudo'}) }}
         {{ form_row(registrationForm.prenom) }}
         {{ form_row(registrationForm.nom) }}
@@ -20,7 +25,15 @@
             label: 'Mot de passe'
         }) }}
         {{ form_row(registrationForm.agreeTerms) }}
+        <div id="divBtnValidInscription">
+            <button id="btnValidInscirption" class="btn btn-lg btn-primary" type="submit">
+                Valider
+            </button>
+        </div>
+        {{ form_end(registrationForm) }}
+    </div>
+{% endblock %}
 
-        <button type="submit" class="btn">Valider</button>
-    {{ form_end(registrationForm) }}
+{% block footer %}
+    {% include 'footer/footer.html.twig' %}
 {% endblock %}

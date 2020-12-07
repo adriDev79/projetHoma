@@ -2,15 +2,32 @@
 
 {% block title %}Mon Profil{% endblock %}
 
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/modifProfil.css') }}">
+{% endblock %}
+
 {% block header %}
     {% include 'headers/headerConnect.html.twig' %}
 {% endblock %}
 
 {% block main %}
-    <h2>Modifier mon profil</h2>
-    {{ form_start(formUpdateProfil) }}
-    {{ form_widget(formUpdateProfil) }}
-    <button type="submit">Valider</button>
-    <button type="reset">Annuler</button>
-    {{ form_end(formUpdateProfil) }}
+    <h2 id="h2ModifProfil">Modifier mon profil</h2>
+    <div id="divModifProfil">
+        {{ form_start(formUpdateProfil) }}
+        {{ form_widget(formUpdateProfil) }}
+        <div id="divBtnValidModifProfil">
+            <button id="btnValidModifProfil" class="btn btn-lg btn-primary" type="submit">
+                Valider
+            </button>
+            <button id="btnResetModifProfil" class="btn btn-lg btn-primary" type="reset">
+                Annuler
+            </button>
+        </div>
+        {{ form_end(formUpdateProfil) }}
+    </div>
+
+{% endblock %}
+
+{% block footer %}
+    {% include 'footer/footer.html.twig' %}
 {% endblock %}

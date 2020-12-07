@@ -1,0 +1,66 @@
+main {
+    width: 100%;
+    color: #17202A;
+    font-weight: bold;
+}
+
+#h2ModifProfil{
+    font-size: 20px;
+    font-weight: bold;
+    padding: 5px;
+    width: 100%;
+    margin-left: 1%;
+    color: #17202A;
+}
+
+#divModifProfil > form > div > div > label {
+    margin-left: 1%;
+    width: 10%;
+}
+
+#divBtnValidModifProfil {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#btnResetModifProfil {
+   margin-left: 1%;
+    font-size: 15px;
+}
+
+#btnValidModifProfil {
+    margin-right: 1%;
+    font-size: 15px;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+}
+
+@media screen and (max-width: 400px) {
+    #divModifProfil > form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #divModifProfil > form > div > div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #divModifProfil > form > div > div > label {
+        margin-bottom: 10px;
+        width: 100%;
+    }
+
+    #divBtnValidModifProfil {
+        margin-top: 20px;
+    }
+}

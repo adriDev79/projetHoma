@@ -1,0 +1,35 @@
+main {
+    width: 100%;
+    color: #17202A;
+    font-weight: bold;
+}
+
+#h2Profil{
+    font-size: 20px;
+    font-weight: bold;
+    padding: 5px;
+    width: 100%;
+    margin-left: 1%;
+    color: #17202A;
+}
+
+#profil {
+    margin-left: 1%;
+    width: 98%;
+}
+
+#divBtnModifProfil {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#btnModifProfil {
+    font-size: 15px;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+}

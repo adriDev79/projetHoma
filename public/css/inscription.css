@@ -1,0 +1,61 @@
+main {
+    width: 100%;
+    color: #17202A;
+    font-weight: bold;
+}
+
+#h2Inscription{
+    font-size: 20px;
+    font-weight: bold;
+    padding: 5px;
+    width: 100%;
+    margin-left: 1%;
+    color: #17202A;
+}
+
+#divInscription > form > div > label {
+    margin-left: 1%;
+    width: 10%;
+}
+
+#divBtnValidInscription {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#btnValidInscirption {
+    margin-right: 1%;
+    font-size: 15px;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+}
+
+@media screen and (max-width: 400px) {
+    #divInscription > form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #divInscription > form > div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #divInscription > form > div > label {
+        margin-bottom: 10px;
+        width: 100%;
+    }
+
+    #divBtnValidInscription {
+        margin-top: 20px;
+    }
+}
